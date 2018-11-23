@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@exibir']);
+Route::get('/login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@exibir', 'middleware' => [
+    'guest'
+]]);
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/', function() {
