@@ -15,7 +15,7 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            Redirect::to('login')->withErrors(['message' => 'É necessário fazer o login']);
+            \Redirect::to('login')->withErrors(['message' => 'É necessário fazer o login']);
         }
     }
 }
