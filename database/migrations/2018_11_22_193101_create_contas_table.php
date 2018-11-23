@@ -14,8 +14,8 @@ class CreateContasTable extends Migration
     public function up()
     {
         Schema::create('contas', function (Blueprint $table) {
-            $table->uuid('uuid')->unique();
             $table->increments('id');
+            $table->uuid('uuid')->unique();
             $table->string('username')->unique();
             $table->string('password');
             $table->integer('user_id')->unsigned();

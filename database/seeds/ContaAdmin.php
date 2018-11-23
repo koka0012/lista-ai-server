@@ -1,6 +1,6 @@
 <?php
 
-use App\Contas;
+use App\Conta;
 use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -16,11 +16,13 @@ class ContaAdmin extends Seeder
     {
         // First creat admin User
         $user = new User();
-        $user->name = "admin";
+        $user->fantasia = "admin";
+        $user->cpf_cnpj = "000.000.000-00";
+        $user->email = "admin@admin.com.br";
         $user->save();
 
         // Create admin account now
-        $account = new Contas;
+        $account = new Conta;
         $account->username = "admin";
         $account->password = Hash::make("admin");
         $account->user_id = $user->id;
