@@ -11,4 +11,10 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@exibir']);
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/', function() {
+        return 'Teste';
+    });
+});
