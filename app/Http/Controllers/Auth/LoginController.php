@@ -21,7 +21,7 @@ class LoginController extends Controller
     /**
      * Registrar o usuário.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function registrar(Request $request)
@@ -33,7 +33,8 @@ class LoginController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function login(Request $request) {
+    public function login(Request $request)
+    {
         //
     }
 }
