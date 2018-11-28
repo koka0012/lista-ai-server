@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@exibir', 'middleware' => [
-    'guest'
-]]);
+Route::get('/', function(){
+    return view('index');
+});
 
-Route::group(['middleware' => ['auth']], function() {
-    Route::get('/', function() {
-        return 'Teste';
-    });
+Route::get('/teste', function(){
+    return view('welcome');
 });
