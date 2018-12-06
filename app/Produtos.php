@@ -23,4 +23,13 @@ class Produtos extends Model
 
         return $listarproduto;
     }
+
+    public function NomeProduto($nome){
+        $listarprodutonome = DB::table('produtos')
+                            ->where('nome', 'LIKE', "%$nome%")
+                            ->orderBy('valor', 'asc')
+                            ->get();
+
+        return $listarprodutonome;
+    }
 }

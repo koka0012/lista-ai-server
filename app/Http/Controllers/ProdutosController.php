@@ -20,4 +20,8 @@ class ProdutosController extends Controller
     public function Produto ($id){
         return $this->produtos->ListarProduto($id);
     }
+
+    public function NomeProduto($name){
+        return $this->produtos->NomeProduto($name);
+    }
 }

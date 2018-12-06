@@ -41,13 +41,4 @@ Route::prefix('usuario')->group(function(){
     Route::get('/listar  ', 'usuariosController@listar');
 });
 
-            // Rotas diretas para a API
-
-    Route::group(['prefix' => '/api'], function () {
-        Route::group(['prefix' => '/produtos'], function(){
-            Route::get('/', 'ProdutosController@TodosProdutos');
-            Route::get('/{id}', 'ProdutosController@Produto');
-        });
-    });
-
-
+            
