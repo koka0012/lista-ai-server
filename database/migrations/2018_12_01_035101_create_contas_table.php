@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateContasTable extends Migration
 {
@@ -15,14 +15,7 @@ class CreateContasTable extends Migration
     {
         Schema::create('contas', function (Blueprint $table) {
             $table->increments('id');
-            $table->uuid('uuid')->unique();
-            $table->string('usuario')->unique();
-            $table->string('senha');
-            $table->integer('user_id')->unsigned();
             $table->timestamps();
-            $table->softDeletesTz();
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

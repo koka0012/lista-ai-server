@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<title>Lista Ai - Login</title>
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'>
-		<link rel="stylesheet" href="css/stylelogin.css"> 
+		<link rel="stylesheet" href="../css/stylelogin.css">
 	</head>
 
 	<body>
@@ -15,26 +15,27 @@
 				<li class="tab col s3"><a class="white-text" href="#register">Registrar</a></li>
 			</ul>
 			<div id="login" class="col s12">
-				<form class="col s12">
+            <form action="{{url('/validacao')}}" method="POST" class="col s12">
 					<div class="form-container">
 						<h3>Bem vindo</h3>
 						<div class="row">
 							<div class="input-field col s12">
-								<input id="email" type="email" class="validate">
+								<input id="email" type="text" name="usuario" class="validate" required\>
 								<label for="email">Usuário</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-								<input id="password" type="password" class="validate">
-								<label for="password">Senha</label>
+								<input id="password" type="password" name="senha" class="validate" required>
+                                <label for="password">Senha</label>
 							</div>
 						</div>
 						<br>
 						<center>
 							<button class="btn waves-effect waves-light teal" type="submit" name="action">Acessar</button>
 						</center>
-					</div>
+                    </div>
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
 				</form>
 			</div>
 			<div id="register" class="col s12">
@@ -80,7 +81,7 @@
 		</div>
 		<script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
-		<script  src="js/index.js"></script>
+		<script  src="../js/index.js"></script>
 
 	</body>
 

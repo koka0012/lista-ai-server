@@ -1,0 +1,47 @@
+body
+{
+	background: #f5f5f5;
+}
+
+h5, h3
+{
+	font-weight: 400;
+	color: #54bddb;
+}
+
+.container
+{
+	margin-top: 80px;
+	width: 400px;
+	height: 700px;
+}
+
+.tabs .indicator
+{
+	background-color: #e0f2f1;
+	height: 60px;
+	opacity: 0.3;
+}
+
+.form-container
+{
+	padding: 40px;
+	padding-top: 10px;
+}
+
+.validate {
+	border: #54bddb;
+}
+
+.confirmation-tabs-btn
+{
+	position: absolute;
+}
+
+.bgtab, button {
+	background-image: linear-gradient(#54bddb, #61c5e2);
+}
+
+.bluefont {
+	color: #54bddb;
+}
