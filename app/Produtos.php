@@ -17,6 +17,8 @@ class Produtos extends Model
 
         $listarproduto = DB::table('produtos')
                             ->where('id', $id)
+                            ->inRandomOrder()
+                            ->limit(10)
                             ->get();
 
         return $listarproduto;
