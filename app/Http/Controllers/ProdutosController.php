@@ -13,6 +13,8 @@ class ProdutosController extends Controller
         $this->produtos = $produto;
     }
 
+    // API
+    
     public function TodosProdutos(){
         return $this->produtos->ListarProdutos();
     }
@@ -24,4 +26,17 @@ class ProdutosController extends Controller
     public function NomeProduto($name){
         return $this->produtos->NomeProduto($name);
     }
+
+//----------------------------------------------------------------------------------------------
+ 
+    // WEB
+    public function ListarTodosProdutos(){
+        return $this->produtos->ListarTodosProdutos();
+    }
+
+    public function CadastrarProduto(Request $request){
+        return $this->produtos->CadastrarProduto($request);
+    }
+
+    
 }

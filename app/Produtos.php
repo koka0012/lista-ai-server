@@ -11,6 +11,11 @@ class Produtos extends Model
         return self::all();
     }
 
+    public function ListarTodosProdutos(){
+        $produtos = self::all();
+        return view('listar', compact('produtos'));
+    }
+
     public function ListarProduto($id){
 
         $idTemp = $id;
@@ -32,4 +37,16 @@ class Produtos extends Model
 
         return $listarprodutonome;
     }
+
+    public function CadastrarProduto($request){
+        $nome = $request->input('name');
+        $valor = $request->input('price');
+        $desc = $request->input('desc');
+        $marca = $request->input('marca');
+
+       DB::table('produtos')->insert(['nome'=>$nome,'valor'=>$valor,'descricao'=>$desc,'marca'=>$marca]);
+
+        return redirect('/produtos/listar');
+    }
+
 }

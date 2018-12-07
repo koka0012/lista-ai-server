@@ -12,39 +12,41 @@
 */
 
 
-
+// CHAMA PREVIEW
 Route::get('/', function(){
     return view('index');
 });
-
-
+// CHAMA PAGINA DE LOGIN
 Route::get('/login', function(){
     return view('login');
 });
 
+// CHAMA VALIDAÇÃO DE LOGIN
 Route::post('/login/go', 'Auth\LoginController@login');
 
+
+
+
+// CHAMA HOME
 Route::get('/home', function(){
     return view('home');
 });
 
+// CHAMA PERFIL
 Route::get('/perfil', function () {
     return view('perfil');
 });
 
+// CHAMA PRODUTOS ( CADASTRAR OU LISTAR )
 Route::prefix('produtos')->group(function(){
     Route::get('/cadastrar', function(){
         return view('cadastrar');
     });
-    Route::get('/listar', function(){
-        return view('listar');
-    });
+    Route::get('/listar', 'ProdutosController@ListarTodosProdutos');
+
+    Route::post('/cadastrar/go', 'ProdutosController@CadastrarProduto');
 });
 
-Route::prefix('usuario')->group(function(){
-    Route::post('/cadastrar', 'usuariosController@cadastrar');
-    Route::get('/editar', 'usuariosController@editar');
-    Route::get('/remover', 'usuariosController@remover');
-    Route::get('/listar  ', 'usuariosController@listar');
-});
+
+
 

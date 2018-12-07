@@ -6,32 +6,26 @@
 		</header>
 
 		<section class="container">
+
 			<table class="striped responsive-table">
 				<thead>
 					<tr>
 						<th>#</th>
-						<th class="lista_desc">Descrição</th>
+						<th class="lista_desc">Nome</th>
 						<th>Valor</th>
 						<th>Marca</th>
-						<th>Categoria</th>
 					</tr>
 				</thead>
 
 				<tbody>
+					@foreach($produtos as $produto)
 					<tr>
-						<td>1</td>
-						<td>Produto 1</td>
-						<td>R$0.87</td>
-						<td>Marca 1</td>
-						<td>Categoria 1</td>
+						<td>{{$produto->id}}</td>
+						<td>{{$produto->nome}}</td>
+						<td>{{'R$ '.number_format($produto->valor,2)}}</td>
+						<td>{{$produto->marca}}</td>
 					</tr>
-					<tr>
-						<td>2</td>
-						<td>Produto 2</td>
-						<td>R$0.87</td>
-						<td>Marca 2</td>
-						<td>Categoria 2</td>
-					</tr>
+					@endforeach
 				</tbody>
 			</table>
 		</section>
