@@ -20,8 +20,8 @@
 					<label for="valor">Valor</label>
 			</div>
 			<div class="input-field col s6">
-					<input id="valor" type="text" class="validate" name="marca" require>
-					<label for="valor">Marca</label>
+					<input id="marca" type="text" class="validate" name="marca" require>
+					<label for="marca">Marca</label>
 			</div>
 		</div>
 		<div class="row">
