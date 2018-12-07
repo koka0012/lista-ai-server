@@ -6,6 +6,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use YourAppRocks\EloquentUuid\Traits\HasUuid;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 /**
  * App\Contas
@@ -52,6 +54,24 @@ class Conta extends Authenticatable implements JWTSubject
     public $hidden = [
         'password'
     ];
+
+    public function validaUser($request){
+
+        $user = $request->input('user');
+        $pass = $request->input('pass');
+
+        $count = DB::table('contas')
+                            ->where('usuario', $user)
+                            ->where('senha', $pass)
+                            ->count();
+
+        if($count == 0){
+            $usuarioTemp = $user;
+            return Redirect::back();
+        }else{
+            return redirect('home/');
+        }
+    }
 
     public function user()
     {

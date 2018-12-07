@@ -2,7 +2,7 @@
 
 @section('content_page')
 		<header>
-			<h3>DADOS <b>GERAIS</b></h3>
+            <h3>DADOS <b>GERAIS</b></h3>
 		</header>
 
 		<section class="flex">

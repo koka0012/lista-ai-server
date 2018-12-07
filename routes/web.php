@@ -11,11 +11,18 @@
 |
 */
 
+
+
 Route::get('/', function(){
     return view('index');
 });
 
-Route::post('/validacao', 'usuariosController@login');
+
+Route::get('/login', function(){
+    return view('login');
+});
+
+Route::post('/login/go', 'Auth\LoginController@login');
 
 Route::get('/home', function(){
     return view('home');
@@ -41,4 +48,3 @@ Route::prefix('usuario')->group(function(){
     Route::get('/listar  ', 'usuariosController@listar');
 });
 
-            

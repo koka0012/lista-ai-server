@@ -1,88 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" >
 
-	<head>
-		<meta charset="UTF-8">
-		<title>Lista Ai - Login</title>
-		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'>
-		<link rel="stylesheet" href="../css/stylelogin.css">
-	</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lista Ai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="../css/style-preview.css">
+  </head>
 
-	<body>
-		<div class="container white z-depth-2">
-			<ul class="tabs teal bgtab">
-				<li class="tab col s3"><a class="white-text active" href="#login">Entrar</a></li>
-				<li class="tab col s3"><a class="white-text" href="#register">Registrar</a></li>
-			</ul>
-			<div id="login" class="col s12">
-            <form action="{{url('/validacao')}}" method="POST" class="col s12">
-					<div class="form-container">
-						<h3>Bem vindo</h3>
-						<div class="row">
-							<div class="input-field col s12">
-								<input id="email" type="text" name="usuario" class="validate" required\>
-								<label for="email">Usuário</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								<input id="password" type="password" name="senha" class="validate" required>
-                                <label for="password">Senha</label>
-							</div>
-						</div>
-						<br>
-						<center>
-							<button class="btn waves-effect waves-light teal" type="submit" name="action">Acessar</button>
-						</center>
-                    </div>
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-				</form>
-			</div>
-			<div id="register" class="col s12">
-				<form class="col s12">
-					<div class="form-container">
-						<h3>Registre-se</h3>
-						<div class="row">
-							<div class="input-field col s12">
-								<input id="last_name" type="text" class="validate">
-								<label for="last_name">Razão Social / Fantasia</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								<input id="cnpjcpf" type="text" class="validate">
-								<label for="cnpjcpf">CNPJ/CPF</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								<input id="user" type="text" class="validate">
-								<label for="user">Usuário</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								<input id="password" type="password" class="validate">
-								<label for="password">Senha</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								<input id="password-confirm" type="password" class="validate">
-								<label for="password-confirm">Confirme sua senha</label>
-							</div>
-						</div>
-						<center>
-							<button class="btn waves-effect waves-light teal" type="submit" name="action">Cadastrar</button>
-						</center>
-					</div>
-				</form>
-			</div>
-		</div>
-		<script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
-		<script  src="../js/index.js"></script>
+  <body>
 
-	</body>
+    <div class="card-movie-wrapper card-movie-wrapper--centered">
+
+      <div class="card-movie-carousel">
+
+        <div class="card-movie card-movie--light card-movie--looper card-movie--active">
+          <img src="img/logogeral.png" width="350" style="padding-top: 90px"></img>
+
+          <div class="card-movie__content">
+
+            <div class="card-movie__title">Lista Ai</div>
+
+            <div class="card-movie__description">
+
+              <p>Aplicativo criado pela turma de analise e desenvolvimento de sistemas da faculdade fasipe.</p>
+
+            </div>
+
+            <ul class="card-movie__details-item card-movie__details-list">
+              <li>Gabriel Marcato</li>
+              <li>Mauro Moura</li>
+              <li>Augusto Chmieleski</li>
+              <li>Paulo Renan</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    <a class="button" href="/login">Continuar</a>
+    </div>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  </body>
 
 </html>

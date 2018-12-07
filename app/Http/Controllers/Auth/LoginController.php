@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Conta;
 
 class LoginController extends Controller
 {
@@ -13,6 +16,12 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $userValid = null;
+
+    public function __construct(Conta $userValid){
+        $this->conta = $userValid;
+    }
+
     public function exibir()
     {
         return response('TODO');
@@ -35,6 +44,6 @@ class LoginController extends Controller
      */
     public function login(Request $request)
     {
-        //
+        return $this->conta->validaUser($request);
     }
 }
