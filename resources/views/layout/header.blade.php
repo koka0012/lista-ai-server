@@ -7,12 +7,11 @@
 		<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
-
 	<body>
 
 		<nav>
 			<div class="nav-wrapper navbg">
-				<a href="home.html" class="left brandlogo"><img src="img/logo.png" alt="ListaAi" height="58"></a>
+				<a href="home.html" class="left brandlogo"><img src="../img/logo.png" alt="ListaAi" height="58"></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="/home"><b>Home</b></a></li>
 					<!-- Dropdown -->

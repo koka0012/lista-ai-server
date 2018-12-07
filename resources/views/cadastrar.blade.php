@@ -3,7 +3,6 @@
 <header>
 <h3>CADASTRAR <b>PRODUTOS</b></h3>
 </header>
-
 <section class="container">
 
 <div class="row">
@@ -38,8 +37,5 @@
 		{{ csrf_field() }}
 	</form>
 </div>
-
-
 </section>
-
 @endsection
