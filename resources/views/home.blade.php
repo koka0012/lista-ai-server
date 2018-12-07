@@ -13,7 +13,7 @@
 						<span><h4>FORNECEDORES</h4></span>
 					</div>
 					<div class="cardtext">
-						<span>85</span>
+						<span>1</span>
 					</div>
 				</div>
 			</div>
@@ -24,7 +24,7 @@
 						<span><h4>PRODUTOS</h4></span>
 					</div>
 					<div class="cardtext">
-						<span>15</span>
+						<span>{{$count}}</span>
 					</div>
 				</div>
 			</div>

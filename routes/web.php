@@ -24,13 +24,8 @@ Route::get('/login', function(){
 // CHAMA VALIDAÇÃO DE LOGIN
 Route::post('/login/go', 'Auth\LoginController@login');
 
-
-
-
 // CHAMA HOME
-Route::get('/home', function(){
-    return view('home');
-});
+Route::get('/home', 'ProdutosController@DadosGeral');
 
 // CHAMA PERFIL
 Route::get('/perfil', function () {

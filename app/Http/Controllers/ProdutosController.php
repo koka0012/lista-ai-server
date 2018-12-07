@@ -38,5 +38,8 @@ class ProdutosController extends Controller
         return $this->produtos->CadastrarProduto($request);
     }
 
+    public function DadosGeral(){
+        return $this->produtos->DadosGeral();
+    }
     
 }

@@ -49,4 +49,11 @@ class Produtos extends Model
         return redirect('/produtos/listar');
     }
 
+    public function DadosGeral(){
+        $count = DB::table('produtos')
+                            ->count();
+
+        return view('/home', compact('count'));
+    }
+
 }
