@@ -17,7 +17,7 @@
 					<!-- Dropdown -->
 					<li><a class='dropdown-button' href='#' data-target='dropdown1'><b>Produtos</b></a></li>
 					<li><a href="/perfil"><b>Perfil</b></a></li>
-					<li><a href="#!"><b>Sair</b></a></li>
+					<li><a href="/login"><b>Sair</b></a></li>
 				</ul>
 			</div>
 		</nav>
