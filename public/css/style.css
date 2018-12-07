@@ -62,7 +62,7 @@ header > h2, h3 {
 }
 
 .footer {
-  position:absolute;
+  position:fixed;
   bottom:0;
   width:100%;
   background-image: linear-gradient(#54bddb, #61c5e2);
